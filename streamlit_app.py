@@ -47,5 +47,6 @@ else:
     st.warning("Please make sure both ingredients and name are provided.")
     
 #New session to display smoothiefroot nutrition information
-smoothiefroot_response = response.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 st.text(smoothiefroot_response.json())
+#st_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
