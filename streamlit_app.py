@@ -38,6 +38,9 @@ st.write(my_insert_stmt)
 
 time_to_insert = st.button('Submit Order')
 
+else:
+    st.warning("Please make sure both ingredients and name are provided.")
+    
 if time_to_insert:
     session.sql(my_insert_stmt).collect()
     st.success(f"Your Smoothie is ordered, {name_on_order}!", icon="✅")
