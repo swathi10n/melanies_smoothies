@@ -25,7 +25,7 @@ ingredients_list = st.multiselect(
 
 if ingredients_list:
     
-    ingredients_string = ''
+    ingredients_string = st.text_input("Choose upto 5 ingredents")
 
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
